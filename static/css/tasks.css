@@ -1,0 +1,160 @@
+/* TASKS */
+.username {
+    color: var(--orange);
+}
+
+.logout {
+    transition: all .5s ease;
+    font-weight: lighter;
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 12px;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+.tasks {
+    max-width: 550px;
+}
+
+.task {
+    user-select: none;
+    background-color: var(--blue);
+    margin-bottom: 20px;
+    padding: 5px 25px 5px 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+.completed {
+    background-color: var(--accent) !important;
+}
+
+.description {
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.date {
+    width: 150px;
+    margin-left: auto;
+}
+
+.edit {
+    cursor: pointer;
+}
+
+/* EDIT FORM */
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 15px 0 15px;
+
+}
+
+.form input:not(.form-check) {
+    width: 150px;
+    margin-right: 50px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.form-date {
+    min-width: 140px !important;
+}
+
+.form-submit {
+    display: inline;
+    margin-left: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 0px;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.delete {
+    font-size: 25px;
+    padding-left: 10px;
+    color: white;
+}
+
+/* NEW ENTRY FORM */
+
+#NewEntryForm {
+    display: none;
+}
+
+.new-entry-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+
+
+/* CHECKBOX */
+/*.check {*/
+/*transition: all .5s ease;*/
+/*position: relative;*/
+/*!*padding-left: 30px;*!*/
+/*!*margin: 0 0 14px 8px;*!*/
+/*cursor: pointer;*/
+/*!*margin-left: 20%;*!*/
+/*!*margin-left: auto;*!*/
+/*}*/
+
+/*.check input {*/
+/*!*position: absolute;*!*/
+/*display: none;*/
+/*cursor: pointer;*/
+/*}*/
+
+/*.tick {*/
+/*position: absolute;*/
+/*top: 0;*/
+/*left: 0;*/
+/*height: 15px;*/
+/*width: 15px;*/
+/*background-color: #eee;*/
+/*}*/
+
+/*.check:hover input ~ .tick {*/
+/*transition: all .5s ease;*/
+/*background-color: #ccc;*/
+/*}*/
+
+/*.check input:checked ~ .tick {*/
+/*!*background-color: var(--green);*!*/
+/*background-color: var(--blue);*/
+/*}*/
+
+/*.tick:after {*/
+/*content: "";*/
+/*position: absolute;*/
+/*display: none;*/
+/*}*/
+
+/*.check input:checked ~ .tick:after {*/
+/*display: block;*/
+/*}*/
+
+/*.check .tick:after {*/
+/*left: 3px;*/
+/*width: 5px;*/
+/*height: 10px;*/
+/*border: solid white;*/
+/*border-width: 0 3px 3px 0;*/
+/*transform: rotate(45deg);*/
+/*}*/

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>/home/sol/Code/PHP/Ecole/01-MVC_Framework/app/controllers</OriginalElement>
+  <nodes>
+    <node x="0.0" y="0.0">\Model</node>
+    <node x="257.0" y="1420.0">\Logging</node>
+    <node x="526.0" y="1124.0">\Home</node>
+    <node x="1072.0" y="1124.0">\Errors</node>
+    <node x="799.0" y="1124.0">\Register</node>
+    <node x="0.0" y="785.0">\Application</node>
+    <node x="0.0" y="1420.0">\View</node>
+    <node x="510.0" y="1420.0">\Router</node>
+    <node x="237.0" y="921.0">\Controller</node>
+    <node x="530.0" y="511.0">\Task</node>
+    <node x="1345.0" y="1124.0">\Tasks</node>
+    <node x="1687.0" y="785.0">\DB</node>
+    <node x="256.0" y="511.0">\User</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\Home" target="\Controller">
+      <point x="0.0" y="0.0" />
+      <point x="642.5" y="1002.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\User" target="\Model">
+      <point x="0.0" y="0.0" />
+      <point x="373.0" y="235.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\Task" target="\Model">
+      <point x="0.0" y="0.0" />
+      <point x="605.0" y="235.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\Tasks" target="\Controller">
+      <point x="0.0" y="0.0" />
+      <point x="1493.5" y="1002.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\Controller" target="\Application">
+      <point x="0.0" y="0.0" />
+      <point x="361.5" y="833.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\Register" target="\Controller">
+      <point x="0.0" y="0.0" />
+      <point x="915.5" y="1002.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="\Errors" target="\Controller">
+      <point x="0.0" y="0.0" />
+      <point x="1188.5" y="1002.5" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Tree" zoom="0.8" x="933.5979437229439" y="925.3977272727275" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constants</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
