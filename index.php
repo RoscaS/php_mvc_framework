@@ -51,5 +51,3 @@ $uri = isset($_SERVER['PATH_INFO'])
 
 // Routage de l'uri
 Router::route($uri);
-
-
