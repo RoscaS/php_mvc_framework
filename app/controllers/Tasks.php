@@ -61,36 +61,18 @@ class Tasks extends Controller {
 	|*				    HTML          		*|
 	\*------------------------------*/
 
-	public function form($description, $checked, $deadline, $id) {
-		$completed = $checked ? 'checked' : 'value="0"';
-		$html
-				= '<form class="form" method="post" style="display: none;" action="/tasks/update">';
-		$html .= '<input name="description" maxlength="255" class="form-description" type="text" value="' . $description . '">';
-		$html .= '<input name="deadline" class="form-date" type="date" value="' . $deadline . '">';
-		$html .= '<input name="completed" class="form-check" type="checkbox"' . $completed . '>';
-		$html .= '<input name="id" type="hidden" value="' . $id . '">';
-		$html .= '<div>';
-		$html .= '<button class="form-submit" type="submit">';
-		$html .= '<i class="fas fa-save" title="Enregistrer"></i></button>';
-		$html .= '<a class="delete" title="Supprimer" href="'. ROOT . 'tasks/delete?pk='. $id .'">';
-		$html .= '<i class="fas fa-trash-alt"></i></a>';
-		$html .= '</div></form>';
-		return $html;
+	public function form($task) {
+		$completed = $task->completed ? 'checked' : 'value="0"';
+		return Html::TasksUpdateForm($task, $completed);
 	}
 
 	public function taskTable() {
 		$html = '';
 		foreach ($this->tasks as $task) {
-			$html .= '<div class="task' . ($task->completed ? " completed" : "") . '">';
-			$html .= '<span class="description" title="'. $task->description .'">';
-			$html .= $task->description . '</span>';
-			$html .= '<span class="date">';
-			$html .= date("j F Y", strtotime($task->deadline));
-			$html .= '</span><a class="edit">';
-			$html .= '<i class="fas fa-pen" title="Editer"></i></a>';
-			$html .= $this->form(
-					$task->description, $task->completed, $task->deadline, $task->id);
-			$html .= '</div>';
+			$completed = $task->completed ? 'completed' : '';
+			$date = date("j F Y", strtotime($task->deadline));
+			$form = $this->form($task);
+			$html .= Html::TasksTable($completed, $date, $form, $task);
 		}
 		return $html;
 	}

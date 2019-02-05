@@ -4,6 +4,7 @@ class Router {
 
 	public static function route($url) {
 		// Controller
+
 		$controller = (isset($url[0]) && $url[0] != '') ? ucwords($url[0]) : DEFAULT_CONTROLLER;
 		array_shift($url);
 
@@ -13,7 +14,6 @@ class Router {
 
 		// Args
 		$args = $url;
-
 
 		self::validUrl($controller, $action);
 		$dispatch = new $controller($controller, $action);
@@ -28,13 +28,11 @@ class Router {
 
 	private static function validUrl($controller, $action) {
 		if (!class_exists($controller)) {
-			// !todo: loging
 			self::redirect('errors/page_not_found');
 		}
 
 
 		if (!method_exists($controller, $action)) {
-			// !todo: loging
 			self::redirect('errors/page_not_found');
 		}
 	}
