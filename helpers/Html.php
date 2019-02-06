@@ -3,7 +3,6 @@
 
 class Html {
 
-
 	static public function TasksUpdateForm($task, $completed) {
 		return <<<HTML
 				

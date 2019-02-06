@@ -2,18 +2,18 @@
 
 class Router {
 
-	public static function route($url) {
+	public static function route($uri) {
 		// Controller
 
-		$controller = (isset($url[0]) && $url[0] != '') ? ucwords($url[0]) : DEFAULT_CONTROLLER;
-		array_shift($url);
+		$controller = (isset($uri[0]) && $uri[0] != '') ? ucwords($uri[0]) : DEFAULT_CONTROLLER;
+		array_shift($uri);
 
 		// Action
-		$action = (isset($url[0]) && $url[0] != '') ? "$url[0]Action" : "indexAction";
-		array_shift($url);
+		$action = (isset($uri[0]) && $uri[0] != '') ? "$uri[0]Action" : "indexAction";
+		array_shift($uri);
 
 		// Args
-		$args = $url;
+		$args = $uri;
 
 		self::validUrl($controller, $action);
 		$dispatch = new $controller($controller, $action);

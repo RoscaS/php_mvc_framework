@@ -13,3 +13,4 @@
 [2019-01-24 17:31:19.349899] insert -> user_session	element_ID: 2	by_user_ID: 
 [2019-01-24 17:31:39.906941] insert -> task	element_ID: 22	by_user_ID: 5
 [2019-01-24 17:31:58.426624] insert -> user_session	element_ID: 3	by_user_ID: 
+[2019-02-05 19:57:07.014890] insert -> user_session	element_ID: 4	by_user_ID: 
